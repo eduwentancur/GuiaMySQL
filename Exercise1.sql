@@ -1,8 +1,11 @@
+/*Elimina si existe la base de datos superheroes*/
 DROP DATABASE IF EXISTS superhéroes;
-CREATE DATABASE superhéroes;
 
-/*Crear tabla de creador y personajes*/
+/*Crea la base si no existe una base supereheroes*/
+CREATE DATABASE IF NOT EXISTS superhéroes CHARACTER SET utf8mb4;
+
 USE superhéroes;
+/*Crear tabla de creador y personajes*/
 CREATE TABLE creador (
 id_creador INT UNSIGNED AUTO_INCREMENT ,
  nombre VARCHAR(20) NOT NULL,
