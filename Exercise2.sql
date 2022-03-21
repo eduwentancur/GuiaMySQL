@@ -124,13 +124,3 @@ SELECT cod_jefe, nombre, COUNT(id_emp) As 'Cantidad de empleados' FROM empleados
 SELECT d.id_depto, d.nombre_depto FROM departamentos AS d, empleados AS e WHERE d.id_depto = e.id_depto GROUP BY d.id_depto HAVING COUNT(*)=0;
 # 27. Mostrar la lista de los empleados cuyo salario es mayor o igual que el promedio de la empresa. Ordenarlo por departamento
 SELECT *, round((SELECT AVG(sal_emp) FROM empleados),2) AS 'PROMEDIO EMPRESA' FROM empleados WHERE sal_emp>=(SELECT AVG(sal_emp) FROM empleados) ORDER BY id_depto;
-
-
-
-
-
-
-
-
-
-
