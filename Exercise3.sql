@@ -112,32 +112,3 @@ SELECT nombre FROM fabricante WHERE codigo NOT IN (SELECT codigo_fabricante FROM
 productos que el fabricante Lenovo.*/
 SELECT fabricante.nombre, COUNT(producto.codigo) AS 'Mismo numero de fabricante lenovo = 2' FROM fabricante INNER JOIN producto ON fabricante.codigo = producto.codigo_fabricante GROUP BY fabricante.codigo HAVING COUNT(producto.codigo) >= (
 SELECT COUNT(producto.codigo) FROM fabricante INNER JOIN producto ON fabricante.codigo = producto.codigo_fabricante WHERE fabricante.nombre = 'Lenovo');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
